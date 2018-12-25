@@ -1,0 +1,128 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.ratel</groupId>
+  <artifactId>base</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <properties>
+  	 <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <spring-boot.version>1.5.8.RELEASE</spring-boot.version>
+        <springfox-swager.version>2.8.0</springfox-swager.version>
+  </properties>
+
+  <dependencyManagement>
+  	<dependencies>
+  		<!-- spring boot 依赖管理-->
+  		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-dependencies</artifactId>
+			<version>${spring-boot.version}</version>
+			<type>pom</type>
+	        <scope>import</scope>
+		</dependency>
+
+        <!--redis-springboot包-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <version>1.4.2.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-redis</artifactId>
+            <version>1.4.2.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session-data-redis</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>${jedis.version}</version>
+        </dependency>
+
+		<!-- spring cloud配置服务 -->
+	 	<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+            <version>1.4.2.RELEASE</version>
+            <type>pom</type>
+	        <scope>import</scope>
+    	</dependency>
+
+    	<!-- spring cloud注册服务 -->
+    	<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+            <version>1.4.2.RELEASE</version>
+            <type>pom</type>
+	        <scope>import</scope>
+        </dependency>
+        <!-- eureka-server的依赖 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka-server</artifactId>
+            <version>1.4.2.RELEASE</version>
+            <type>pom</type>
+	        <scope>import</scope>
+        </dependency>
+
+        <!--feign-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+            <version>1.4.2.RELEASE</version>
+            <type>pom</type>
+	        <scope>import</scope>
+        </dependency>
+
+        <!--zuul网关-->
+        <dependency>
+			<groupId>org.springframework.cloud</groupId>
+    		<artifactId>spring-cloud-starter-zuul</artifactId>
+   			 <version>1.4.2.RELEASE</version>
+            <type>pom</type>
+	        <scope>import</scope>
+		</dependency>
+
+            <!-- swager -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${springfox-swager.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${springfox-swager.version}</version>
+            </dependency>
+
+
+	</dependencies>
+  </dependencyManagement>
+  <build>
+	<plugins>
+		<plugin>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-maven-plugin</artifactId>
+		</plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+            </configuration>
+        </plugin>
+	</plugins>
+  </build>
+  <modules>
+  	<module>eurka.server</module>
+  	<!--<module>demo_client</module>-->
+  	<!--<module>demo_api</module>-->
+    <!--<module>demo_si</module>-->
+  </modules>
+</project>
