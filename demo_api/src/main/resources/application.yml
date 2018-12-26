@@ -1,0 +1,21 @@
+## 基本配置
+server:
+  context-path: /demo
+  version: 1.0
+  name: demo
+  undertow:
+    worker-threads: 8 #默认io-threads * 8
+#spring相关配置
+spring:
+  application:
+    name: demo
+  profiles:
+    active: test
+
+#swagger http://localhost:ip/swagger-ui.html#!
+swagger:
+  title: demo
+  description: demo接口文档
+  version: 1.0
+  basePackage: com.ratel.demo.controller
+

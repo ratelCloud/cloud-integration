@@ -13,6 +13,7 @@
 
   <dependencyManagement>
   	<dependencies>
+
   		<!-- spring boot 依赖管理-->
   		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -21,6 +22,26 @@
 			<type>pom</type>
 	        <scope>import</scope>
 		</dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
+
+        <!--mybatis-->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.13</version>
+            <scope>runtime</scope>
+        </dependency>
+
 
         <!--redis-springboot包-->
         <dependency>
@@ -88,22 +109,31 @@
 	        <scope>import</scope>
 		</dependency>
 
-            <!-- swager -->
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger2</artifactId>
-                <version>${springfox-swager.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger-ui</artifactId>
-                <version>${springfox-swager.version}</version>
-            </dependency>
+        <!-- swager -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${springfox-swager.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${springfox-swager.version}</version>
+        </dependency>
 
 
-	</dependencies>
+
+        <!-- validation,用于校验 -->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>2.0.1.Final</version>
+        </dependency>
+
+
+    </dependencies>
   </dependencyManagement>
-  <build>
+    <build>
 	<plugins>
 		<plugin>
 			<groupId>org.springframework.boot</groupId>
@@ -119,10 +149,11 @@
         </plugin>
 	</plugins>
   </build>
-  <modules>
-  	<module>eurka.server</module>
-  	<!--<module>demo_client</module>-->
-  	<!--<module>demo_api</module>-->
-    <!--<module>demo_si</module>-->
-  </modules>
+    <modules>
+        <!--<module>demo_client</module>-->
+        <module>eureka.server</module>
+        <module>common</module>
+        <module>demo_api</module>
+        <module>demo_si</module>
+    </modules>
 </project>

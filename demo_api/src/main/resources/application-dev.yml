@@ -1,0 +1,18 @@
+#本地配置
+server:
+  port: 8101
+#eureka客户端配置
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://dafy:dafy-123@localhost:2100/eureka/
+  instance:
+    lease-renewal-interval-in-seconds: 1   #每间隔1s，向服务端发送一次心跳，证明自己依然”存活“
+    lease-expiration-duration-in-seconds: 2  #告诉服务端，如果我2s之内没有给你发心跳，就代表我“死”了，将我踢出掉
+    status-page-url: http://localhost:${server.port}/${server.name}/swagger-ui.html # ${server.port} 服务的端口号
+
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.147.192:3306/pintuan?useSSL=false&useUnicode=true&characterEncoding=utf-8
+    username: pintuan
+    password: FJAOFbhS0sMzyZzY
