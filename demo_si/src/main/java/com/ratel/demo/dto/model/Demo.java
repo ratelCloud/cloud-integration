@@ -4,6 +4,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
 /**
  * @author niexiang
@@ -11,7 +12,7 @@ import javax.validation.constraints.NotNull;
  * @create 2018-03-19 19:16
  **/
 @ApiModel(value = "demo")
-public class Demo {
+public class Demo implements Serializable {
 
     @NotNull
     @ApiModelProperty(value = "id")

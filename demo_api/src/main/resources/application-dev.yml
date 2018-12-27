@@ -16,3 +16,8 @@ spring:
     url: jdbc:mysql://192.168.147.192:3306/pintuan?useSSL=false&useUnicode=true&characterEncoding=utf-8
     username: pintuan
     password: FJAOFbhS0sMzyZzY
+
+
+  redis:
+    host: localhost
+    port: 6379

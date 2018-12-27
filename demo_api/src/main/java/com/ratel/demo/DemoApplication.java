@@ -12,7 +12,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 * @version  1.0.0
 * @date 2018/12/26
 */
-@SpringBootApplication(scanBasePackages = "com.ratel")
+@SpringBootApplication(scanBasePackages = "com.ratel.common"
+									+ ",com.ratel.demo")
 @EnableDiscoveryClient
 public class DemoApplication {
 	public static void main(String[] args) {

@@ -19,3 +19,9 @@ swagger:
   version: 1.0
   basePackage: com.ratel.demo.controller
 
+
+ratel:
+  exception:
+    '1001': 参数异常！
+    '2001': redis异常！
+    '1000': {0}

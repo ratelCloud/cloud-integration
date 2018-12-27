@@ -8,14 +8,6 @@
   <artifactId>demo_si</artifactId>
 
   <dependencies>
-    <dependency>
-      <groupId>io.springfox</groupId>
-      <artifactId>springfox-swagger2</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>io.springfox</groupId>
-      <artifactId>springfox-swagger-ui</artifactId>
-    </dependency>
 
 
     <dependency>
@@ -28,6 +20,12 @@
       <scope>runtime</scope>
     </dependency>
 
+
+    <dependency>
+      <groupId>com.ratel</groupId>
+      <artifactId>common</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
 
     <!-- validation,用于校验 -->
     <dependency>

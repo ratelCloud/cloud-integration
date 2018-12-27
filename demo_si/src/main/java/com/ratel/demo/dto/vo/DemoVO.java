@@ -3,6 +3,8 @@ package com.ratel.demo.dto.vo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+import java.math.BigDecimal;
+
 /**
  * @author niexiang
  * @Description
@@ -16,6 +18,9 @@ public class DemoVO {
 
     @ApiModelProperty(value = "商品名称")
     private String productName;
+
+    @ApiModelProperty(value = "价格")
+    private BigDecimal groupPrice;
 
     public int getId() {
         return id;
@@ -39,5 +44,13 @@ public class DemoVO {
                 "id=" + id +
                 ", productName='" + productName + '\'' +
                 '}';
+    }
+
+    public BigDecimal getGroupPrice() {
+        return groupPrice;
+    }
+
+    public void setGroupPrice(BigDecimal groupPrice) {
+        this.groupPrice = groupPrice;
     }
 }

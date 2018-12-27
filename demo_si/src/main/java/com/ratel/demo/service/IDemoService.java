@@ -14,4 +14,7 @@ import com.ratel.demo.dto.vo.DemoVO;
 public interface IDemoService {
 
     DemoVO get(Demo demo);
+
+    DemoVO getCache(Demo demo);
+
 }

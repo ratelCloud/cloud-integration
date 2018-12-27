@@ -1,5 +1,6 @@
 package com.ratel.demo.service;
 
+import com.ratel.common.util.redis.CacheFactory;
 import com.ratel.demo.dao.DemoMapper;
 import com.ratel.demo.dto.model.Demo;
 import com.ratel.demo.dto.vo.DemoVO;
@@ -22,5 +23,11 @@ public class DemoService implements IDemoService {
         DemoVO demoVO = demoMapper.get(demo.getId());
         logger.info("demo:{}",demoVO);
         return demoVO;
+    }
+
+    @Override
+    public DemoVO getCache(Demo demo) {
+        CacheFactory.putObject("213",demo);
+        return null;
     }
 }

@@ -47,8 +47,25 @@ public class DemoController {
         DemoVO demoVO = demoService.get(demo);
         if (demoVO == null) {
             logger.error("获取不到信息，param：{}",demo);
-        	throw new BusinessException(145010);
+        	throw new BusinessException(1000);
         }
         return new RestResult(demoVO);
     }
+
+    /**
+     * getDemo
+     * <p>
+     * @param demo
+     * @return
+     * @author  niexiang
+     * @version   1.0.0
+     * @date  2018/12/18
+     */
+    @PostMapping("/getCache")
+    @ApiOperation(value = "getCache",tags = "demo")
+    public RestResult<DemoVO> getCache(@RequestBody @Validated Demo demo) {
+        DemoVO demoVO = demoService.getCache(demo);
+        return new RestResult(demoVO);
+    }
+
 }
