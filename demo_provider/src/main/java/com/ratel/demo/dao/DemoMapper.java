@@ -22,7 +22,7 @@ public interface DemoMapper {
      * @param id
      * @return
      */
-    @Select("select * from product where id = #{id}")
+    @Select("select id,product_name productName,group_price groupPrice from product where id = #{id}")
     DemoVO get(@Param("id") Long id);
 
 }

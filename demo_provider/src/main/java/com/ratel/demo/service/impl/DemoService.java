@@ -1,9 +1,10 @@
-package com.ratel.demo.service;
+package com.ratel.demo.service.impl;
 
 import com.ratel.common.util.redis.CacheFactory;
 import com.ratel.demo.dao.DemoMapper;
 import com.ratel.demo.dto.model.Demo;
 import com.ratel.demo.dto.vo.DemoVO;
+import com.ratel.demo.service.IDemoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

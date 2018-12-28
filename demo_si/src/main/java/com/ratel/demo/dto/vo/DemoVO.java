@@ -1,5 +1,7 @@
 package com.ratel.demo.dto.vo;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.ratel.common.dto.BigDecimalSerialize;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -19,6 +21,7 @@ public class DemoVO {
     @ApiModelProperty(value = "商品名称")
     private String productName;
 
+    @JsonSerialize(using = BigDecimalSerialize.class)
     @ApiModelProperty(value = "价格")
     private BigDecimal groupPrice;
 

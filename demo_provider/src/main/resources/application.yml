@@ -32,3 +32,6 @@ ratel:
     '1001': 参数异常！
     '2001': redis异常！
     '1000': {0}
+
+ratel:
+  demo: localhost:8101

@@ -70,11 +70,6 @@
       <artifactId>demo_si</artifactId>
       <version>0.0.1-SNAPSHOT</version>
     </dependency>
-      <dependency>
-          <groupId>com.ratel</groupId>
-          <artifactId>common</artifactId>
-          <version>0.0.1-SNAPSHOT</version>
-      </dependency>
 
 
       <dependency>

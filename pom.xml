@@ -135,10 +135,10 @@
 	</plugins>
   </build>
     <modules>
-        <!--<module>demo_client</module>-->
+        <module>demo_client</module>
         <module>eureka.server</module>
         <module>common</module>
-        <module>demo_api</module>
+        <module>demo_provider</module>
         <module>demo_si</module>
     </modules>
 </project>

@@ -4,7 +4,7 @@ import com.ratel.common.dto.RestResult;
 import com.ratel.common.exception.BusinessException;
 import com.ratel.demo.dto.model.Demo;
 import com.ratel.demo.dto.vo.DemoVO;
-import com.ratel.demo.service.DemoService;
+import com.ratel.demo.service.impl.DemoService;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
