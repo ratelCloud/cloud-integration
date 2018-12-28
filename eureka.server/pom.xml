@@ -5,7 +5,7 @@
     <artifactId>base</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>eurka.server</artifactId>
+  <artifactId>eureka.server</artifactId>
   
   <dependencies>
   	 <dependency>
