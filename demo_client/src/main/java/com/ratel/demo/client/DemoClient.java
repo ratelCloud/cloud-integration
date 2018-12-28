@@ -7,7 +7,7 @@ import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(name= "DemoClient",url = "ratel.demo")
+@FeignClient(name= "demo")
 public interface DemoClient {
 
     @PostMapping({"/demo/get"})

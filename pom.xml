@@ -63,7 +63,7 @@
     	<dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
-            <version>1.4.2.RELEASE</version>
+            <version>1.4.4.RELEASE</version>
             <type>pom</type>
 	        <scope>import</scope>
         </dependency>
@@ -71,7 +71,7 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka-server</artifactId>
-            <version>1.4.2.RELEASE</version>
+            <version>1.4.4.RELEASE</version>
             <type>pom</type>
 	        <scope>import</scope>
         </dependency>
@@ -80,7 +80,7 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-feign</artifactId>
-            <version>1.4.2.RELEASE</version>
+            <version>1.4.4.RELEASE</version>
             <type>pom</type>
 	        <scope>import</scope>
         </dependency>
