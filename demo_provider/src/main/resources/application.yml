@@ -1,8 +1,6 @@
 ## 基本配置
 server:
   port: 8101
-  context-path: /demo
-  version: 1.0
   name: demo
   undertow:
     worker-threads: 8 #默认io-threads * 8

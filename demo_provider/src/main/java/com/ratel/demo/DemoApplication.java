@@ -15,7 +15,6 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 */
 @SpringBootApplication(scanBasePackages = "com.ratel")
 @EnableDiscoveryClient
-@EnableFeignClients("com.ratel")
 public class DemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
