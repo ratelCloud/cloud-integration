@@ -3,5 +3,5 @@ spring:
     config:
       label: master
       name: ratel
-      profile: demo1
+      profile: demo
       uri: http://localhost:8103/
