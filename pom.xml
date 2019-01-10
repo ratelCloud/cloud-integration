@@ -140,5 +140,7 @@
         <module>common</module>
         <module>demo_provider</module>
         <module>demo_si</module>
+        <module>es_si</module>
+        <module>es_provider</module>
     </modules>
 </project>

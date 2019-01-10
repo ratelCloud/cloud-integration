@@ -2,6 +2,5 @@ spring:
   cloud:
     config:
       label: master
-#      name: ratel
-      profile: demo
+      profile: es
       uri: http://localhost:8103/

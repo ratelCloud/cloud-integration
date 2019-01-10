@@ -1,0 +1,9 @@
+## 基本配置
+server:
+  port: 8105
+  name: es
+#spring相关配置
+spring:
+  application:
+    name: es
+
